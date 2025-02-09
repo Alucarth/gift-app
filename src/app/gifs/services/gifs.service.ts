@@ -9,7 +9,7 @@ export class GifsService {
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs';
 
   public gifList: Gif[] = []
- 
+
   constructor(private http: HttpClient) {
     this.getLocalHistory()
 
@@ -32,7 +32,6 @@ export class GifsService {
 
   saveLocalStorage(): void{
     localStorage.setItem('history', JSON.stringify(this._tagsHistory))
-
   }
 
   getLocalHistory():void  {
